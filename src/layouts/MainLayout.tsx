@@ -7,7 +7,16 @@ const MainLayout = () => {
   //   return <Navigate to="/login" state={{ pathname }} replace />;
   // }
 
-  return <Outlet />;
+  return (
+    <>
+      <header>Header</header>
+      <main>
+        <Outlet />
+      </main>
+
+      <footer>Navigation</footer>
+    </>
+  );
 };
 
 export default MainLayout;

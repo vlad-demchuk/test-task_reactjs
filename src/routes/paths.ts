@@ -14,6 +14,3 @@ export const routePaths = {
 
   // Add more route paths here as needed
 } as const;
-
-// Type for route keys - useful for type safety
-export type RoutePathsKeys = keyof typeof routePaths;
