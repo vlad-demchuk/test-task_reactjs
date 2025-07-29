@@ -33,8 +33,6 @@ const appRouter = createBrowserRouter([
           const userId = params.userId!;
 
           try {
-            throw new Response('User not found', { status: 404 });
-
             const res = await userService.getById(userId);
             return res.data;
           } catch (error) {
