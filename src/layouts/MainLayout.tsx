@@ -1,21 +1,18 @@
 import { Outlet } from 'react-router';
 
-const MainLayout = () => {
-  // Use Route Protection if needed
-  // const { pathname } = useLocation();
-  // if (!isAuthenticated) {
-  //   return <Navigate to="/login" state={{ pathname }} replace />;
-  // }
+import { Footer, Header } from '@/components';
 
+const MainLayout = () => {
   return (
-    <>
-      <header>Header</header>
-      <main>
+    <div className="flex flex-col h-screen place-items-center">
+      <Header />
+
+      <main className="flex-1 overflow-y-auto p-2">
         <Outlet />
       </main>
 
-      <footer>Navigation</footer>
-    </>
+      <Footer />
+    </div>
   );
 };
 

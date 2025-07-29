@@ -8,9 +8,14 @@
 export const routePaths = {
   // Main routes
   home: '/',
+  about: '/about',
+  users: '/users',
 
   // Fallback routes
   notFound: '*',
+} as const;
 
-  // Add more route paths here as needed
+export const pathToTitle: Record<string, string> = {
+  [routePaths.about]: 'About',
+  [routePaths.users]: 'Users',
 } as const;

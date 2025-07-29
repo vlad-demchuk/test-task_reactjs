@@ -2,7 +2,7 @@ import React from 'react';
 
 import { twMerge } from 'tailwind-merge';
 
-type ButtonVariant = 'primary' | 'destructive';
+type ButtonVariant = 'primary' | 'secondary';
 
 interface Props extends React.ComponentPropsWithoutRef<'button'> {
   variant?: ButtonVariant;
@@ -13,7 +13,7 @@ const defaultStyles =
 
 const buttonVariants: Record<ButtonVariant, string> = {
   primary: 'border-black text-white bg-black hover:bg-white hover:text-black',
-  destructive:
+  secondary:
     'border-gray-200 text-black bg-gray-200 hover:bg-gray-300 hover:text-red-black',
 };
 

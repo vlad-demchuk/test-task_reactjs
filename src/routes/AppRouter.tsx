@@ -1,6 +1,8 @@
-import { RouterProvider, createBrowserRouter } from 'react-router';
+import { Navigate, RouterProvider, createBrowserRouter } from 'react-router';
 
 import { MainLayout } from '@/layouts';
+import AboutPage from '@/pages/AboutPage.tsx';
+import UsersPage from '@/pages/UsersPage.tsx';
 import { routePaths } from '@/routes/paths';
 import { lazyRoute, withFallback } from '@/routes/routeHelpers.tsx';
 
@@ -11,7 +13,15 @@ const appRouter = createBrowserRouter([
     children: [
       {
         index: true,
-        ...lazyRoute(() => import('@/pages/HomePage')),
+        element: <Navigate to={routePaths.about} replace />,
+      },
+      {
+        path: routePaths.about,
+        element: <AboutPage />,
+      },
+      {
+        path: routePaths.users,
+        element: <UsersPage />,
       },
     ],
   },
