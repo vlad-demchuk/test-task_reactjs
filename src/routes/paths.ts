@@ -10,6 +10,7 @@ export const routePaths = {
   home: '/',
   about: '/about',
   users: '/users',
+  userById: 'users/:userId',
 
   // Fallback routes
   notFound: '*',

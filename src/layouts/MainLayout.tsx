@@ -4,10 +4,10 @@ import { Footer, Header } from '@/components';
 
 const MainLayout = () => {
   return (
-    <div className="flex flex-col h-screen place-items-center">
+    <div className="flex flex-col h-screen place-items-center ">
       <Header />
 
-      <main className="flex-1 overflow-y-auto p-2">
+      <main className="w-full flex-1 overflow-y-auto p-2 max-w-screen-xl mx-auto">
         <Outlet />
       </main>
 
