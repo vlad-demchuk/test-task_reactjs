@@ -1,4 +1,4 @@
-import { Navigate, RouterProvider, createBrowserRouter } from 'react-router';
+import { Navigate, RouterProvider, createHashRouter } from 'react-router';
 
 import { MainLayout } from '@/layouts';
 import AboutPage from '@/pages/AboutPage.tsx';
@@ -10,7 +10,7 @@ import { lazyRoute, withFallback } from '@/routes/routeHelpers.tsx';
 
 import { userService } from '@/features/users/services';
 
-const appRouter = createBrowserRouter([
+const appRouter = createHashRouter([
   {
     path: routePaths.home,
     element: <MainLayout />,
